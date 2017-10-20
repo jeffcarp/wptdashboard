@@ -4,6 +4,8 @@ jobs:
     docker:
       - image: gcr.io/wptdashboard/wptd-testrun
     environment:
+      - TERM: linux
+      - TERMINFO: /etc/terminfo
       - PLATFORM_ID: firefox-57.0-linux
       # We'd get this from the checkout normally (I think)
       - WPT_SHA: c2d0053cfa
