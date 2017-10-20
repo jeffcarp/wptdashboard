@@ -26,4 +26,4 @@ jobs:
 
       - run:
           name: Run tests
-          command: bash /run.py
+          command: python /run.py
