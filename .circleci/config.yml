@@ -9,9 +9,8 @@ jobs:
       - PLATFORM_ID: firefox-57.0-linux
       # We'd get this from the checkout normally (I think)
       - WPT_SHA: c2d0053cfa
-      - RUN_PATH: shadow-dom
     working_directory: ~/repo
-    parallelism: 3
+    parallelism: 4
     steps:
       - checkout
       - run:
