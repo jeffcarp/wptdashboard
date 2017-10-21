@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: gcr.io/wptdashboard/wptd-testrun
+      - image: gcr.io/wptdashboard/wptd-testrun-circle
     environment:
       - TERM: linux
       - TERMINFO: /etc/terminfo
@@ -11,6 +11,7 @@ jobs:
       - WPT_SHA: c2d0053cfa
       - RUN_PATH: shadow-dom
     working_directory: ~/repo
+    parallelism: 3
     steps:
       - checkout
       - run:
